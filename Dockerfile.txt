@@ -1,0 +1,14 @@
+# Dockerfile for WordPress
+FROM wordpress:latest
+
+# Add custom configurations if needed
+# COPY custom-config.php /var/www/html/wp-content/
+
+# Set necessary environment variables for MySQL/MariaDB connection
+ENV WORDPRESS_DB_HOST=db
+ENV WORDPRESS_DB_USER=root
+ENV WORDPRESS_DB_PASSWORD=password
+ENV WORDPRESS_DB_NAME=mydatabase
+
+# Expose the port if needed
+# EXPOSE 80
